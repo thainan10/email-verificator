@@ -25,6 +25,6 @@ router.post("/register", async (request, response, next) => {
 app.use(bodyParser.json());
 app.use(router);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Service running on port ${PORT}`);
 });
